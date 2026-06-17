@@ -1,0 +1,228 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.btnVoltar { align-self: flex-start; font-size: 0.85rem; }
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.title { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; margin-bottom: 4px; }
+.sub   { color: var(--gray-light); font-size: 0.9rem; }
+
+.saldoAtualSmall {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 12px 18px;
+  background: rgba(200,241,53,0.06);
+  border: 1px solid rgba(200,241,53,0.2);
+  border-radius: var(--radius-lg);
+}
+.saldoLabelSm { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lime); font-weight: 600; }
+.saldoValSm   { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--lime); }
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Form card */
+.formCard { display: flex; flex-direction: column; gap: 22px; }
+
+.section { display: flex; flex-direction: column; gap: 14px; }
+
+.sectionLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-light);
+}
+
+/* Métodos */
+.metodos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.metodoBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 10px;
+  border-radius: var(--radius-md);
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.metodoBtn:hover { border-color: var(--lime); }
+.metodoBtnAtivo  { background: rgba(200,241,53,0.1) !important; border-color: var(--lime) !important; }
+
+.metodoIcon  { font-size: 1.5rem; }
+.metodoLabel { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+.metodoSub   { font-size: 0.7rem; color: var(--gray-light); }
+
+.divider { height: 1px; background: var(--dark-4); }
+
+/* Cupons */
+.cuponsHint { display: flex; flex-direction: column; gap: 10px; }
+.hintLabel  { font-size: 0.75rem; color: var(--gray-light); font-weight: 500; }
+
+.cupons { display: flex; flex-direction: column; gap: 8px; }
+
+.cupomBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.cupomBtn:hover { border-color: var(--lime); }
+
+.cupomCode { font-size: 0.85rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; }
+.cupomVal  { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--lime); }
+
+/* Valores rápidos */
+.valoresRapidos { display: flex; flex-direction: column; gap: 10px; }
+
+.valoresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.valorBtn {
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.valorBtn:hover    { border-color: var(--lime); color: var(--lime); }
+.valorBtnAtivo     { background: rgba(200,241,53,0.1); border-color: var(--lime); color: var(--lime); }
+
+.btnContinuar { padding: 13px; font-size: 0.95rem; }
+
+/* Info lateral */
+.infoCol { display: flex; flex-direction: column; gap: 14px; }
+
+.infoCard { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
+.infoTitle { font-size: 0.9rem; font-weight: 700; }
+
+.infoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.infoList li {
+  font-size: 0.82rem;
+  color: var(--gray-light);
+  padding-left: 14px;
+  position: relative;
+}
+.infoList li::before { content: '→'; position: absolute; left: 0; color: var(--lime); }
+
+.infoTxt { font-size: 0.82rem; color: var(--gray-light); line-height: 1.6; }
+
+.carteiraGrid { display: flex; flex-direction: column; gap: 10px; }
+.carteiraItem { display: flex; flex-direction: column; gap: 2px; }
+.carteiraLabel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-light); }
+.carteiraVal   { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--lime); }
+
+/* Confirmação */
+.confirmCard {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.confirmTitle { font-size: 1.3rem; font-weight: 700; }
+
+.confirmDetalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  background: var(--dark-3);
+  border-radius: var(--radius-md);
+}
+.confirmRow     { display: flex; justify-content: space-between; align-items: center; }
+.confirmLabel   { font-size: 0.85rem; color: var(--gray-light); }
+.confirmVal     { font-size: 0.9rem; font-weight: 600; color: var(--white); }
+.confirmDestaque { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--lime); }
+.confirmDivider  { height: 1px; background: var(--dark-4); }
+
+.confirmBtns { display: flex; gap: 10px; }
+.confirmBtns .btn { flex: 1; padding: 12px; }
+
+/* Sucesso */
+.sucessoCard {
+  max-width: 460px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.sucessoIconWrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(200,241,53,0.12);
+  border: 2px solid var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sucessoIcon  { font-size: 2.2rem; }
+.sucessoTitle { font-size: 1.5rem; font-weight: 800; }
+.sucessoSub   { font-size: 0.95rem; color: var(--gray-light); }
+
+.saldoAtual {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 24px;
+  background: rgba(200,241,53,0.06);
+  border: 1px solid rgba(200,241,53,0.2);
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+.saldoLabel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lime); font-weight: 600; }
+.saldoVal   { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--lime); }
+
+.sucessoBtns { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.sucessoBtns .btn { width: 100%; padding: 12px; }
+
+.aviso { font-size: 0.72rem; color: var(--gray); text-align: center; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .layout  { grid-template-columns: 1fr; }
+  .metodos { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .valoresGrid { grid-template-columns: repeat(2, 1fr); }
+  .confirmBtns { flex-direction: column; }
+}

@@ -259,6 +259,14 @@
       "valor": -3651,
       "criadaEm": "2026-06-17T19:45:26.566Z",
       "id": 7
+    },
+    {
+      "usuarioId": 2,
+      "tipo": "ganho",
+      "descricao": "Ganho: Botafogo x Flamengo",
+      "valor": 36510,
+      "criadaEm": "2026-06-17T19:45:38.944Z",
+      "id": 8
     }
   ],
   "bonus": [

@@ -18,6 +18,7 @@ import UserApostas from '../pages/user/UserApostas'
 import UserHistorico from '../pages/user/UserHistorico'
 import UserRanking from '../pages/user/UserRanking'
 import UserExtrato from '../pages/user/UserExtrato'
+import UserDepositar from '../pages/user/UserDepositar'
 
 // Guards
 function RotaPrivada({ children }) {
@@ -67,6 +68,7 @@ export default function AppRoutes() {
         <Route path="historico"  element={<UserHistorico />} />
         <Route path="ranking"    element={<UserRanking />} />
         <Route path="extrato"    element={<UserExtrato />} />
+        <Route path="depositar"  element={<UserDepositar />} />
       </Route>
 
       {/* Fallback */}
