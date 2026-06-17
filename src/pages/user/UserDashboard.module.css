@@ -1,0 +1,254 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.sub {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Colunas principais */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.seeAll {
+  font-size: 0.82rem;
+  color: var(--lime);
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+.seeAll:hover { opacity: 0.75; }
+
+/* Eventos */
+.eventosList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eventoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.eventoTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.esporte {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-light);
+}
+
+.eventoTimes {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.eventoTimes span {
+  color: var(--gray);
+  font-weight: 400;
+  margin: 0 6px;
+}
+
+.eventoOdds {
+  display: flex;
+  gap: 8px;
+}
+
+.oddItem {
+  flex: 1;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.oddLabel {
+  font-size: 0.68rem;
+  color: var(--gray-light);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70px;
+}
+
+.oddValue {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lime);
+}
+
+.apostarBtn {
+  width: 100%;
+  padding: 9px;
+  font-size: 0.85rem;
+}
+
+/* Últimas apostas */
+.apostasList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apostaItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.apostaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.apostaEvento {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.apostaPalpite {
+  font-size: 0.78rem;
+  color: var(--gray-light);
+}
+
+.apostaPalpite strong {
+  color: var(--white);
+}
+
+.apostaData {
+  font-size: 0.72rem;
+  color: var(--gray);
+}
+
+.apostaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.apostaValor {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+/* Resumo financeiro */
+.resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resumoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--dark-4);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.resumoItem {
+  background: var(--dark-3);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resumoLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-light);
+  font-weight: 500;
+}
+
+.resumoValor {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .columns   { grid-template-columns: 1fr; }
+  .resumoGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .header { flex-direction: column; }
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+}
