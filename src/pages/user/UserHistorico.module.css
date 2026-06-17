@@ -1,0 +1,88 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.title  { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; margin-bottom: 4px; }
+.sub    { color: var(--gray-light); font-size: 0.9rem; }
+
+/* Resumo */
+.resumoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--dark-4);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--dark-4);
+}
+
+.resumoItem {
+  background: var(--dark-2);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resumoLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-light);
+  font-weight: 500;
+}
+
+.resumoVal {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+/* Filtros */
+.filtros { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--gray-light);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pill:hover { border-color: var(--lime); color: var(--white); }
+
+.pillActive {
+  background: rgba(200,241,53,0.1);
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.pillCount {
+  background: var(--dark-4);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Tabela */
+.eventoNome { font-weight: 600; font-size: 0.88rem; display: block; }
+.resultado  { font-size: 0.72rem; color: var(--gray-light); display: block; margin-top: 2px; }
+.esporte    { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-light); }
+.odd        { font-family: var(--font-display); font-weight: 700; color: var(--lime); }
+.dataCol    { font-size: 0.82rem; color: var(--gray-light); white-space: nowrap; }
+
+@media (max-width: 1024px) {
+  .resumoGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .resumoGrid { grid-template-columns: repeat(2, 1fr); }
+}

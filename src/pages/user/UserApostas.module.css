@@ -1,0 +1,250 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.btnVoltar { align-self: flex-start; font-size: 0.85rem; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Lado esquerdo */
+.left { display: flex; flex-direction: column; gap: 16px; }
+
+.eventoCard { display: flex; flex-direction: column; gap: 16px; }
+
+.eventoTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.esporte {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-light);
+}
+
+/* Times */
+.times {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.timeRight { align-items: center; }
+
+.timeAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--dark-3);
+  border: 2px solid var(--dark-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.timeNome { font-size: 0.88rem; font-weight: 600; text-align: center; }
+
+.vsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.vs {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--gray);
+  letter-spacing: 0.05em;
+}
+
+.hora { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+.data { font-size: 0.7rem; color: var(--gray); text-align: center; }
+
+.descricao { font-size: 0.82rem; color: var(--gray-light); text-align: center; }
+
+.statsEvento {
+  display: flex;
+  gap: 1px;
+  background: var(--dark-4);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.statEv {
+  flex: 1;
+  background: var(--dark-3);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statEvLabel { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-light); }
+.statEvVal   { font-family: var(--font-display); font-size: 1rem; font-weight: 700; }
+
+/* Saldo */
+.saldoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-color: rgba(200,241,53,0.25);
+  background: rgba(200,241,53,0.05);
+}
+
+.saldoLabel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lime); font-weight: 600; }
+.saldoVal   { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--lime); }
+
+/* Formulário */
+.formCard { display: flex; flex-direction: column; gap: 22px; }
+.formTitle { font-size: 1.2rem; font-weight: 700; }
+
+.formSection { display: flex; flex-direction: column; gap: 10px; }
+.formLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-light);
+}
+
+/* Opções de palpite */
+.opcoes { display: flex; gap: 10px; }
+
+.opcao {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-radius: var(--radius-md);
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.opcao:hover { border-color: var(--lime); }
+
+.opcaoAtiva {
+  background: rgba(200,241,53,0.1) !important;
+  border-color: var(--lime) !important;
+}
+
+.opcaoNome {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+
+.opcaoOdd {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--lime);
+  line-height: 1;
+}
+
+.opcaoOddLabel { font-size: 0.65rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Atalhos de valor */
+.atalhos { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.atalhoBtn {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.atalhoBtn:hover:not(:disabled) { border-color: var(--lime); color: var(--lime); }
+.atalhoBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Preview */
+.preview {
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previewLabel { font-size: 0.82rem; color: var(--gray-light); }
+.previewVal   { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+.previewDestaque { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--lime); }
+
+.previewDivider { height: 1px; background: var(--dark-4); margin: 4px 0; }
+
+.btnApostar { padding: 14px; font-size: 0.95rem; }
+
+.aviso { font-size: 0.75rem; color: var(--gray); text-align: center; }
+
+/* Estados */
+.encerradoMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.encerradoIcon { font-size: 2.5rem; }
+.encerradoTxt  { color: var(--gray-light); font-size: 0.9rem; }
+
+.sucessoWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.sucessoIcon { font-size: 3rem; }
+.sucessoTxt  { font-size: 0.95rem; color: var(--white); font-weight: 500; line-height: 1.5; }
+.sucessoBtns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .opcoes { flex-direction: column; }
+}

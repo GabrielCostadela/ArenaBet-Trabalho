@@ -1,0 +1,142 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.title  { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; margin-bottom: 4px; }
+.sub    { color: var(--gray-light); font-size: 0.9rem; }
+
+/* Resumo */
+.resumoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.resumoCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--dark-4);
+  background: var(--dark-2);
+}
+
+.resumoEntrada { border-color: rgba(77,255,145,0.2);  background: rgba(77,255,145,0.04);  }
+.resumoSaida   { border-color: rgba(255,77,77,0.2);   background: rgba(255,77,77,0.04);   }
+.resumoSaldo   { border-color: rgba(200,241,53,0.2);  background: rgba(200,241,53,0.04);  }
+
+.resumoIcon { font-size: 1.6rem; flex-shrink: 0; }
+
+.resumoLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-light);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.resumoVal {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Filtros */
+.filtros { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--gray-light);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pill:hover  { border-color: var(--lime); color: var(--white); }
+.pillActive  { background: rgba(200,241,53,0.1); border-color: var(--lime); color: var(--lime); }
+
+.pillCount {
+  background: var(--dark-4);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Lista */
+.lista { display: flex; flex-direction: column; gap: 8px; }
+
+.movItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.movIcon {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-3);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.movInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.movDescricao {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movTipo {
+  font-size: 0.75rem;
+  color: var(--gray-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.movData { font-size: 0.72rem; color: var(--gray); }
+
+.movValor {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.movPos { color: var(--success); }
+.movNeg { color: var(--danger);  }
+
+.aviso {
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-align: center;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .resumoGrid { grid-template-columns: 1fr; }
+}
