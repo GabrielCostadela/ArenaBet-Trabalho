@@ -1,0 +1,214 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "email": "admin@arenabet.com",
+      "senha": "123",
+      "perfil": "admin",
+      "saldo": 0,
+      "avatar": "A",
+      "pontos": 0,
+      "totalApostas": 0,
+      "apostasGanhas": 0
+    },
+    {
+      "id": 2,
+      "nome": "Gabriel Silva",
+      "email": "gabriel@arenabet.com",
+      "senha": "123",
+      "perfil": "usuario",
+      "saldo": 1500,
+      "avatar": "G",
+      "pontos": 320,
+      "totalApostas": 8,
+      "apostasGanhas": 5
+    },
+    {
+      "id": 3,
+      "nome": "Gilvan Costa",
+      "email": "gilvan@arenabet.com",
+      "senha": "123",
+      "perfil": "usuario",
+      "saldo": 2200,
+      "avatar": "G",
+      "pontos": 510,
+      "totalApostas": 12,
+      "apostasGanhas": 8
+    },
+    {
+      "id": 4,
+      "nome": "João Jogador",
+      "email": "joao@arenabet.com",
+      "senha": "123",
+      "perfil": "usuario",
+      "saldo": 850,
+      "avatar": "J",
+      "pontos": 180,
+      "totalApostas": 5,
+      "apostasGanhas": 2
+    }
+  ],
+  "eventos": [
+    {
+      "id": 1,
+      "timeA": "Brasil",
+      "timeB": "Argentina",
+      "esporte": "Futebol",
+      "data": "2026-07-10",
+      "hora": "20:00",
+      "status": "aberto",
+      "resultado": "",
+      "oddA": 2.10,
+      "oddB": 3.50,
+      "oddEmpate": 3.20,
+      "descricao": "Clássico Sul-Americano"
+    },
+    {
+      "id": 2,
+      "timeA": "Lakers",
+      "timeB": "Bulls",
+      "esporte": "Basquete",
+      "data": "2026-07-12",
+      "hora": "22:30",
+      "status": "aberto",
+      "resultado": "",
+      "oddA": 1.85,
+      "oddB": 2.10,
+      "oddEmpate": null,
+      "descricao": "Confronto histórico da NBA"
+    },
+    {
+      "id": 3,
+      "timeA": "Flamengo",
+      "timeB": "Palmeiras",
+      "esporte": "Futebol",
+      "data": "2026-06-28",
+      "hora": "18:00",
+      "status": "encerrado",
+      "resultado": "Flamengo",
+      "oddA": 2.40,
+      "oddB": 2.80,
+      "oddEmpate": 3.10,
+      "descricao": "Duelo pelo Brasileirão"
+    },
+    {
+      "id": 4,
+      "timeA": "Djokovic",
+      "timeB": "Alcaraz",
+      "esporte": "Tênis",
+      "data": "2026-07-15",
+      "hora": "15:00",
+      "status": "aberto",
+      "resultado": "",
+      "oddA": 2.60,
+      "oddB": 1.70,
+      "oddEmpate": null,
+      "descricao": "Final de Wimbledon"
+    },
+    {
+      "id": 5,
+      "timeA": "São Paulo",
+      "timeB": "Corinthians",
+      "esporte": "Futebol",
+      "data": "2026-06-20",
+      "hora": "16:00",
+      "status": "encerrado",
+      "resultado": "Empate",
+      "oddA": 2.20,
+      "oddB": 3.00,
+      "oddEmpate": 3.40,
+      "descricao": "Derby Paulista"
+    }
+  ],
+  "apostas": [
+    {
+      "id": 1,
+      "usuarioId": 2,
+      "eventoId": 3,
+      "palpite": "Flamengo",
+      "valor": 200,
+      "status": "ganhou",
+      "retorno": 480,
+      "oddUsada": 2.40,
+      "criadaEm": "2026-06-25T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "usuarioId": 3,
+      "eventoId": 3,
+      "palpite": "Palmeiras",
+      "valor": 300,
+      "status": "perdeu",
+      "retorno": 0,
+      "oddUsada": 2.80,
+      "criadaEm": "2026-06-25T11:00:00Z"
+    },
+    {
+      "id": 3,
+      "usuarioId": 2,
+      "eventoId": 5,
+      "palpite": "Empate",
+      "valor": 150,
+      "status": "ganhou",
+      "retorno": 510,
+      "oddUsada": 3.40,
+      "criadaEm": "2026-06-18T09:00:00Z"
+    },
+    {
+      "id": 4,
+      "usuarioId": 4,
+      "eventoId": 3,
+      "palpite": "Palmeiras",
+      "valor": 100,
+      "status": "perdeu",
+      "retorno": 0,
+      "oddUsada": 2.80,
+      "criadaEm": "2026-06-25T12:00:00Z"
+    }
+  ],
+  "movimentacoes": [
+    {
+      "id": 1,
+      "usuarioId": 2,
+      "tipo": "bonus_boas_vindas",
+      "descricao": "Bônus de boas-vindas",
+      "valor": 500,
+      "criadaEm": "2026-06-01T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "usuarioId": 2,
+      "tipo": "ganho",
+      "descricao": "Ganho: Flamengo x Palmeiras",
+      "valor": 480,
+      "criadaEm": "2026-06-28T22:00:00Z"
+    },
+    {
+      "id": 3,
+      "usuarioId": 3,
+      "tipo": "bonus_boas_vindas",
+      "descricao": "Bônus de boas-vindas",
+      "valor": 500,
+      "criadaEm": "2026-06-01T08:00:00Z"
+    }
+  ],
+  "bonus": [
+    {
+      "id": 1,
+      "nome": "Bônus de Boas-vindas",
+      "descricao": "Ganhe R$ 500 fictícios ao criar sua conta",
+      "valor": 500,
+      "tipo": "boas_vindas",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Sequência Vencedora",
+      "descricao": "Ganhe 100 pontos extras ao vencer 3 apostas seguidas",
+      "valor": 100,
+      "tipo": "sequencia",
+      "ativo": true
+    }
+  ]
+}

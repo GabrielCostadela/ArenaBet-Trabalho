@@ -1,0 +1,39 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lime);
+  color: var(--dark);
+  font-family: var(--font-display);
+  font-weight: 800;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: var(--lime);
+}
+
+/* Tamanhos */
+.sm .icon  { width: 28px; height: 28px; font-size: 0.95rem; }
+.sm .text  { font-size: 1.1rem; }
+
+.md .icon  { width: 36px; height: 36px; font-size: 1.1rem; }
+.md .text  { font-size: 1.35rem; }
+
+.lg .icon  { width: 48px; height: 48px; font-size: 1.4rem; }
+.lg .text  { font-size: 1.8rem; }

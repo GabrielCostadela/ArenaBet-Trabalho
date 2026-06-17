@@ -1,0 +1,172 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Hero (esquerdo) ── */
+.hero {
+  flex: 1;
+  background: var(--dark-2);
+  border-right: 1px solid var(--dark-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+}
+
+.heroEyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lime);
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.heroAccent {
+  color: var(--lime);
+}
+
+.heroSub {
+  font-size: 1rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.heroBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.heroBadge {
+  padding: 6px 14px;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.heroGlow {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200,241,53,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Painel (direito) ── */
+.panel {
+  width: 460px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  background: var(--dark);
+}
+
+.formWrap {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.formSub {
+  font-size: 0.88rem;
+  color: var(--gray-light);
+}
+
+/* ── Demo ── */
+.demoRow {
+  display: flex;
+  gap: 10px;
+}
+
+.demoBtn {
+  flex: 1;
+  font-size: 0.82rem;
+  padding: 9px 10px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--dark-4);
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.erroMsg {
+  margin: 0;
+}
+
+.submitBtn {
+  padding: 13px;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--gray);
+  padding-top: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page { flex-direction: column; }
+  .hero { display: none; }
+  .panel { width: 100%; padding: 40px 24px; }
+}
