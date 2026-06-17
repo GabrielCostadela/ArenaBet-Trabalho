@@ -1,0 +1,110 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.title { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; margin-bottom: 4px; }
+.sub   { color: var(--gray-light); font-size: 0.9rem; }
+
+/* Tabela */
+.idCol    { color: var(--gray); font-size: 0.82rem; width: 32px; }
+.eventoNome { font-weight: 600; font-size: 0.9rem; }
+.eventoDesc { font-size: 0.75rem; color: var(--gray-light); margin-top: 2px; }
+.esporte { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-light); }
+.dataCol { font-size: 0.85rem; white-space: nowrap; }
+.hora    { color: var(--gray-light); }
+
+.oddsCell { display: flex; gap: 4px; flex-wrap: wrap; }
+.oddPill {
+  padding: 2px 7px;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--lime);
+  white-space: nowrap;
+}
+
+.acoes { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.btnAcao { padding: 5px 12px; font-size: 0.78rem; }
+.btnDel { color: var(--danger) !important; border-color: transparent !important; }
+.btnDel:hover { border-color: var(--danger) !important; }
+.confirmRow { display: flex; align-items: center; gap: 6px; }
+.confirmTxt { font-size: 0.78rem; color: var(--warning); white-space: nowrap; }
+
+/* Modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--dark-2);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.modalTitle { font-size: 1.2rem; font-weight: 700; }
+.closeBtn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--gray-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.closeBtn:hover { color: var(--white); border-color: var(--gray); }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.oddsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--dark-4);
+}
+
+@media (max-width: 560px) {
+  .row      { grid-template-columns: 1fr; }
+  .oddsRow  { grid-template-columns: 1fr; }
+  .modal    { padding: 20px; }
+}
