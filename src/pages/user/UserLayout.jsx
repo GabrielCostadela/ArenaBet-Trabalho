@@ -4,12 +4,13 @@ import Logo from '../../components/common/Logo'
 import styles from './UserLayout.module.css'
 
 const NAV = [
-  { to: '/app/dashboard',  icon: '🏠', label: 'Início' },
-  { to: '/app/eventos',    icon: '🏟️', label: 'Eventos' },
+  { to: '/app/dashboard',  icon: '🏠', label: 'Início'    },
+  { to: '/app/eventos',    icon: '🏟️', label: 'Eventos'   },
   { to: '/app/historico',  icon: '📋', label: 'Histórico' },
-  { to: '/app/ranking',    icon: '🏆', label: 'Ranking' },
-  { to: '/app/extrato',    icon: '💳', label: 'Extrato' },
+  { to: '/app/ranking',    icon: '🏆', label: 'Ranking'   },
+  { to: '/app/extrato',    icon: '💳', label: 'Extrato'   },
   { to: '/app/depositar',  icon: '💰', label: 'Depositar' },
+  { to: '/app/sacar',      icon: '💸', label: 'Sacar'     },
 ]
 
 export default function UserLayout() {
@@ -51,6 +52,7 @@ export default function UserLayout() {
               R$ {(usuario?.saldo ?? 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </span>
             <Link to="/app/depositar" className={styles.depositarBtn}>+ Depositar fichas</Link>
+            <Link to="/app/sacar"     className={styles.sacarBtn}>− Sacar fichas</Link>
           </div>
           <div className={styles.userInfo}>
             <div className={styles.avatar}>{usuario?.nome?.[0] ?? 'U'}</div>

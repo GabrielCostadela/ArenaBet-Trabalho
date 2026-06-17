@@ -150,7 +150,23 @@
   text-decoration: none;
   transition: background 0.15s;
 }
-.depositarBtn:hover { background: var(--lime-dark);
+.depositarBtn:hover { background: var(--lime-dark); }
+
+.sacarBtn {
+  display: block;
+  margin-top: 4px;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--danger);
+  background: rgba(255,77,77,0.1);
+  border: 1px solid rgba(255,77,77,0.2);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.sacarBtn:hover { background: rgba(255,77,77,0.18);
   font-size: 0.85rem;
   padding: 8px 12px;
   width: 100%;

@@ -18,11 +18,11 @@
       "email": "gabriel@arenabet.com",
       "senha": "123",
       "perfil": "usuario",
-      "saldo": 36510,
+      "saldo": 1500,
       "avatar": "G",
-      "pontos": 4286,
-      "totalApostas": 10,
-      "apostasGanhas": 7
+      "pontos": 320,
+      "totalApostas": 8,
+      "apostasGanhas": 5
     },
     {
       "id": 3,
@@ -47,6 +47,18 @@
       "pontos": 180,
       "totalApostas": 5,
       "apostasGanhas": 2
+    },
+    {
+      "nome": "Josesvaldo da Silva Pinto",
+      "email": "josesvaldo@egmail.com",
+      "senha": "1234",
+      "perfil": "usuario",
+      "saldo": 500,
+      "avatar": "J",
+      "pontos": 0,
+      "totalApostas": 0,
+      "apostasGanhas": 0,
+      "id": 5
     }
   ],
   "eventos": [
@@ -57,8 +69,8 @@
       "esporte": "Futebol",
       "data": "2026-07-10",
       "hora": "20:00",
-      "status": "encerrado",
-      "resultado": "Brasil",
+      "status": "aberto",
+      "resultado": "",
       "oddA": 2.1,
       "oddB": 3.5,
       "oddEmpate": 3.2,
@@ -119,20 +131,6 @@
       "oddB": 3,
       "oddEmpate": 3.4,
       "descricao": "Derby Paulista"
-    },
-    {
-      "timeA": "Botafogo",
-      "timeB": "Flamengo",
-      "esporte": "Futebol",
-      "data": "2026-06-17",
-      "hora": "19:00",
-      "descricao": "Final Copa do Brasoç",
-      "oddA": 10,
-      "oddB": 1.01,
-      "oddEmpate": 5,
-      "status": "encerrado",
-      "resultado": "Botafogo",
-      "id": 6
     }
   ],
   "apostas": [
@@ -179,28 +177,6 @@
       "retorno": 0,
       "oddUsada": 2.8,
       "criadaEm": "2026-06-25T12:00:00Z"
-    },
-    {
-      "usuarioId": 2,
-      "eventoId": 1,
-      "palpite": "Brasil",
-      "valor": 1501,
-      "status": "ganhou",
-      "retorno": 3152,
-      "oddUsada": 2.1,
-      "criadaEm": "2026-06-17T19:42:12.402Z",
-      "id": 5
-    },
-    {
-      "usuarioId": 2,
-      "eventoId": 6,
-      "palpite": "Botafogo",
-      "valor": 3651,
-      "status": "ganhou",
-      "retorno": 36510,
-      "oddUsada": 10,
-      "criadaEm": "2026-06-17T19:45:26.516Z",
-      "id": 6
     }
   ],
   "movimentacoes": [
@@ -229,36 +205,28 @@
       "criadaEm": "2026-06-01T08:00:00Z"
     },
     {
-      "usuarioId": 2,
-      "tipo": "deposito",
-      "descricao": "Depósito via PIX fictício",
-      "valor": 500,
-      "criadaEm": "2026-06-17T19:41:35.739Z",
+      "usuarioId": 3,
+      "tipo": "saque",
+      "descricao": "Saque PIX fictício — chave: 123456789",
+      "valor": -200,
+      "criadaEm": "2026-06-17T20:00:05.134Z",
       "id": 4
     },
     {
-      "usuarioId": 2,
-      "tipo": "aposta",
-      "descricao": "Aposta: Brasil x Argentina — Brasil",
-      "valor": -1501,
-      "criadaEm": "2026-06-17T19:42:12.725Z",
+      "usuarioId": 3,
+      "tipo": "deposito",
+      "descricao": "Depósito via PIX fictício",
+      "valor": 200,
+      "criadaEm": "2026-06-17T20:00:27.304Z",
       "id": 5
     },
     {
-      "usuarioId": 2,
-      "tipo": "ganho",
-      "descricao": "Ganho: Brasil x Argentina",
-      "valor": 3152,
-      "criadaEm": "2026-06-17T19:43:10.940Z",
+      "usuarioId": 5,
+      "tipo": "bonus_boas_vindas",
+      "descricao": "Bônus de boas-vindas",
+      "valor": 500,
+      "criadaEm": "2026-06-17T20:01:27.755Z",
       "id": 6
-    },
-    {
-      "usuarioId": 2,
-      "tipo": "aposta",
-      "descricao": "Aposta: Botafogo x Flamengo — Botafogo",
-      "valor": -3651,
-      "criadaEm": "2026-06-17T19:45:26.566Z",
-      "id": 7
     }
   ],
   "bonus": [

@@ -12,6 +12,8 @@ const TIPO_CONFIG = {
   bonus_boas_vindas:{ icone: '🎁', label: 'Bônus boas-vindas',cor: 'success' },
   sequencia:        { icone: '🔥', label: 'Bônus sequência',  cor: 'success' },
   bonus:            { icone: '🎁', label: 'Bônus',            cor: 'success' },
+  deposito:         { icone: '💰', label: 'Depósito',         cor: 'success' },
+  saque:            { icone: '💸', label: 'Saque',            cor: 'danger'  },
 }
 
 const FILTROS = ['Todos', 'ganho', 'aposta', 'bonus_boas_vindas']

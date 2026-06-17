@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Logo from '../../components/common/Logo'
 import styles from './LoginPage.module.css'
 
 export default function LoginPage() {
   const { login } = useAuth()
-  const navigate = useNavigate()
+  const navigate  = useNavigate()
 
-  const [email, setEmail]     = useState('')
-  const [senha, setSenha]     = useState('')
-  const [erro, setErro]       = useState('')
+  const [email,   setEmail]   = useState('')
+  const [senha,   setSenha]   = useState('')
+  const [erro,    setErro]    = useState('')
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e) {
@@ -22,16 +22,10 @@ export default function LoginPage() {
       const usuario = await login(email.trim(), senha)
       navigate(usuario.perfil === 'admin' ? '/admin/dashboard' : '/app/dashboard', { replace: true })
     } catch (err) {
-      setErro(err.message || 'Erro ao fazer login.')
+      setErro(err.message || 'E-mail ou senha incorretos.')
     } finally {
       setLoading(false)
     }
-  }
-
-  function preencherDemo(perfil) {
-    if (perfil === 'admin') { setEmail('admin@arenabet.com'); setSenha('123') }
-    else                    { setEmail('gabriel@arenabet.com'); setSenha('123') }
-    setErro('')
   }
 
   return (
@@ -49,7 +43,7 @@ export default function LoginPage() {
             Nenhum dinheiro real é envolvido.
           </p>
           <div className={styles.heroBadges}>
-            {['⚽ Futebol','🏀 Basquete','🎾 Tênis','🏆 Ranking'].map(b => (
+            {['⚽ Futebol', '🏀 Basquete', '🎾 Tênis', '🏆 Ranking'].map(b => (
               <span key={b} className={styles.heroBadge}>{b}</span>
             ))}
           </div>
@@ -64,23 +58,7 @@ export default function LoginPage() {
 
           <div className={styles.formHeader}>
             <h2 className={styles.formTitle}>Entrar na plataforma</h2>
-            <p className={styles.formSub}>Use uma conta de teste abaixo para explorar.</p>
-          </div>
-
-          {/* Atalhos demo */}
-          <div className={styles.demoRow}>
-            <button type="button" className={`btn btn-ghost ${styles.demoBtn}`}
-              onClick={() => preencherDemo('admin')}>
-              👑 Entrar como Admin
-            </button>
-            <button type="button" className={`btn btn-ghost ${styles.demoBtn}`}
-              onClick={() => preencherDemo('usuario')}>
-              🎮 Entrar como Jogador
-            </button>
-          </div>
-
-          <div className={styles.separator}>
-            <span>ou entre com suas credenciais</span>
+            <p className={styles.formSub}>Bem-vindo de volta! Acesse sua conta.</p>
           </div>
 
           <form onSubmit={handleSubmit} className={styles.form} noValidate>
@@ -110,7 +88,7 @@ export default function LoginPage() {
               />
             </div>
 
-            {erro && <p className={`alert alert-error ${styles.erroMsg}`}>{erro}</p>}
+            {erro && <p className="alert alert-error">{erro}</p>}
 
             <button
               type="submit"
@@ -120,6 +98,14 @@ export default function LoginPage() {
               {loading ? 'Entrando...' : 'Entrar'}
             </button>
           </form>
+
+          <div className={styles.separator}>
+            <span>não tem uma conta?</span>
+          </div>
+
+          <Link to="/cadastro" className={`btn btn-ghost w-full ${styles.cadastroBtn}`}>
+            Criar conta gratuita
+          </Link>
 
           <p className={styles.disclaimer}>
             🎓 Projeto acadêmico — todos os saldos e apostas são fictícios.

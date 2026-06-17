@@ -3,7 +3,7 @@
   min-height: 100vh;
 }
 
-/* ── Hero (esquerdo) ── */
+/* Hero */
 .hero {
   flex: 1;
   background: var(--dark-2);
@@ -33,7 +33,7 @@
 
 .heroTitle {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.05;
   color: var(--white);
@@ -49,17 +49,23 @@
   margin-bottom: 32px;
 }
 
-.heroBadges { display: flex; flex-wrap: wrap; gap: 10px; }
+.destaque { color: var(--lime); }
 
-.heroBadge {
-  padding: 6px 14px;
-  background: var(--dark-3);
-  border: 1px solid var(--dark-4);
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 500;
+.beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.beneficioItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
   color: var(--white);
 }
+
+.beneficioItem span:first-child { font-size: 1.1rem; width: 24px; text-align: center; }
 
 .heroGlow {
   position: absolute;
@@ -67,36 +73,48 @@
   left: -80px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(200,241,53,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200,241,53,0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* ── Painel (direito) ── */
+/* Painel */
 .panel {
-  width: 460px;
+  width: 480px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 40px;
+  padding: 40px;
   background: var(--dark);
+  overflow-y: auto;
 }
 
 .formWrap {
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 }
 
 .formHeader { display: flex; flex-direction: column; gap: 6px; }
 .formTitle  { font-size: 1.5rem; font-weight: 700; }
 .formSub    { font-size: 0.88rem; color: var(--gray-light); }
 
-.form { display: flex; flex-direction: column; gap: 18px; }
+.form { display: flex; flex-direction: column; gap: 16px; }
 
-.submitBtn { padding: 13px; font-size: 0.95rem; }
+.bonus {
+  padding: 12px 14px;
+  background: rgba(200,241,53,0.08);
+  border: 1px solid rgba(200,241,53,0.25);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--gray-light);
+  text-align: center;
+}
+.bonus strong { color: var(--lime); }
+
+.submitBtn { padding: 13px; font-size: 0.95rem; margin-top: 4px; }
 
 .separator {
   display: flex;
@@ -113,8 +131,6 @@
   background: var(--dark-4);
 }
 
-.cadastroBtn { padding: 12px; font-size: 0.9rem; }
-
 .disclaimer {
   text-align: center;
   font-size: 0.75rem;
@@ -124,5 +140,5 @@
 @media (max-width: 768px) {
   .page  { flex-direction: column; }
   .hero  { display: none; }
-  .panel { width: 100%; padding: 40px 24px; }
+  .panel { width: 100%; padding: 32px 24px; }
 }

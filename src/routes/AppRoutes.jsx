@@ -2,7 +2,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
 // Auth
-import LoginPage from '../pages/auth/LoginPage'
+import LoginPage    from '../pages/auth/LoginPage'
+import CadastroPage from '../pages/auth/CadastroPage'
 
 // Admin
 import AdminLayout from '../pages/admin/AdminLayout'
@@ -19,6 +20,7 @@ import UserHistorico from '../pages/user/UserHistorico'
 import UserRanking from '../pages/user/UserRanking'
 import UserExtrato from '../pages/user/UserExtrato'
 import UserDepositar from '../pages/user/UserDepositar'
+import UserSacar     from '../pages/user/UserSacar'
 
 // Guards
 function RotaPrivada({ children }) {
@@ -49,7 +51,8 @@ export default function AppRoutes() {
       <Route path="/" element={<Navigate to="/login" replace />} />
 
       {/* Pública */}
-      <Route path="/login" element={<RotaPublica><LoginPage /></RotaPublica>} />
+      <Route path="/login"    element={<RotaPublica><LoginPage /></RotaPublica>} />
+      <Route path="/cadastro" element={<RotaPublica><CadastroPage /></RotaPublica>} />
 
       {/* Admin */}
       <Route path="/admin" element={<RotaAdmin><AdminLayout /></RotaAdmin>}>
@@ -69,6 +72,7 @@ export default function AppRoutes() {
         <Route path="ranking"    element={<UserRanking />} />
         <Route path="extrato"    element={<UserExtrato />} />
         <Route path="depositar"  element={<UserDepositar />} />
+        <Route path="sacar"      element={<UserSacar />} />
       </Route>
 
       {/* Fallback */}
